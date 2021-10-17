@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Ancient
+comment1.params=damage\ power
+comment1.target=Ancient(int,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getDescription()
+comment3.params=
+comment3.target=int\ getDamage()
+comment4.params=newPower
+comment4.target=void\ setPower(int)
+comment5.params=
+comment5.target=int\ getPower()
+numComments=6
