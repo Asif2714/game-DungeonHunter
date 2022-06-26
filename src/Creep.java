@@ -3,7 +3,7 @@
 public class Creep extends Enemy{
     private String type; //Add instance varible of type of the enemy if its centaur, enemy will have double damage
     private int bounty;  //Add instace varible of bounty worth after killing
-    
+
     //Constructor
     //
     public Creep(String name, String type, int damage){
@@ -11,14 +11,14 @@ public class Creep extends Enemy{
         this.type = type;
         this.bounty = (damage * 10);
     }
-    
+
     //Method to get description of the enemy
     //
     @Override
     public String getDescription(){
         return "You are facing: "+ super.getDescription() + ", which is a Creep of Type: "+getType() + ", has a bounty of: "+ getBounty()+"!";
     }
-    
+
     //Overriden method of getting the damage from the enemy
     //
     @Override
@@ -30,7 +30,7 @@ public class Creep extends Enemy{
             return super.getDamage();
         }
     }
-    
+
     //Setter and getter methods
     //
     public void setBounty(int newBounty){
@@ -41,5 +41,5 @@ public class Creep extends Enemy{
     }
     public int getBounty(){
         return this.bounty;
-    }    
+    }
 }

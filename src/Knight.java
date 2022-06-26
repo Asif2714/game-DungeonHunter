@@ -3,7 +3,7 @@
 public class Knight extends Hero implements PotionInterface{
     private int armor;          //Makes knight more resistant to attack
     private int potionCount;    //Keeps count of potions available
-    
+
     //Constructor
     //
     public Knight(int health, int damage, int armor){
@@ -11,10 +11,10 @@ public class Knight extends Hero implements PotionInterface{
         this.armor = armor;
         this.potionCount = 3;
     }
-        
+
     //Fighting method
     //
-    @Override 
+    @Override
     public void fightEnemy(Enemy e){
         super.fightEnemy(e);
         System.out.println("You are a Knight, so you have an attack resistance of"+ getArmor() + ".");
@@ -27,18 +27,18 @@ public class Knight extends Hero implements PotionInterface{
         System.out.println("You have killed the "+e.getName());
         System.out.println("After the battle, your health: "+this.getHealth());
     }
-    
+
     //Methods to get information about hero during selection and after fights, overriden with more details
     //
     @Override
     public String selectionInfo(){
-        return super.selectionInfo()+ "Name: "+this.getName()+ " Ability: Armor, get reduced damage from enemies, and has "+this.getPotionCount()+" healing potions."; 
+        return super.selectionInfo()+ "Name: "+this.getName()+ " Ability: Armor, get reduced damage from enemies, and has "+this.getPotionCount()+" healing potions.";
     }
     @Override
     public String getInfo(){
         return super.getInfo() + "Potions: "+this.getPotionCount() + ".";
     }
-    
+
     //Interface methods to consume potions
     //
     @Override
@@ -51,13 +51,13 @@ public class Knight extends Hero implements PotionInterface{
         if (this.getPotionCount() > 0){
             available = " You can consume 1 potion to get 50 health";
         }
-        
+
         return this.getName() + " has " + this.getPotionCount() + " potions left." + available ;
     }
     @Override
     public void usePotion(){
         if (this.getHealth() <= 950){
-        this.setHealth(this.getHealth()+50);
+            this.setHealth(this.getHealth()+50);
         }
         else{
             this.setHealth(1000);
@@ -65,9 +65,9 @@ public class Knight extends Hero implements PotionInterface{
     }
     @Override
     public void setPotionCount(int n){
-        this.potionCount += n; 
+        this.potionCount += n;
     }
-        
+
     //Setter and getter methods
     //
     public int getArmor(){

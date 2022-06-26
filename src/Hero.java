@@ -6,7 +6,7 @@ public class Hero{
     private String name;
     private int health;
     private int damage;
-    
+
     //Constructor
     //
     public Hero(String name, int health, int damage){
@@ -14,14 +14,14 @@ public class Hero{
         this.health = health;
         this.damage = damage;
     }
-    
+
     //Fighting method
     //
     public void fightEnemy(Enemy e){
         System.out.println("You are fighting : "+e.getName());
         System.out.println("Your current health is: "+this.getHealth());
     }
-    
+
     //Methods to get information about hero during selection and after fights.
     //
     public String selectionInfo(){
@@ -30,13 +30,13 @@ public class Hero{
     public String getInfo(){
         return "Your current status:: Hero: "+getName()+", Health: "+getHealth()+ " ";
     }
-    
+
     //Mehtod to change health of hero by an amount.
     //
     public void changeHealth(int change){
         this.health = this.health + change;
     }
-    
+
     //Setter and getter methods
     //
     public String getName(){

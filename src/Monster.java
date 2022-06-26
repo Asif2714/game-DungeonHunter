@@ -4,7 +4,7 @@ import java.util.Random;
 public class Monster extends Enemy{
     private int bashChance; //Have a chance to deal extra heavy damage
     private int bounty;     //Add instance variable of bounty after killing
-    
+
     //Constructor
     //
     public Monster(String name, int damage, int bashChance){
@@ -12,14 +12,14 @@ public class Monster extends Enemy{
         this.bounty = (damage * 5);
         this.bashChance = bashChance;
     }
-    
+
     //Method to get description of the enemy
     //
     @Override
     public String getDescription(){
         return "You are facing: "+super.getDescription() + ", which is a Monster, have bash chance of "+(bashChance*100/10)+"% and has a bounty of "+getBounty()+"!";
     }
-    
+
     //Overriden method of getting the damage from the enemy
     //
     @Override
@@ -27,15 +27,15 @@ public class Monster extends Enemy{
         //If bash is less than the bash chance, enemy will have an extra damage of 100
         Random RNG = new Random();
         int bash = RNG.nextInt(10);
-        
+
         if(bash < this.getBashChance()){    //damage is increased by 100 if chance is satisfied
-            return super.getDamage() + 100;     
+            return super.getDamage() + 100;
         }
         else {
             return super.getDamage();
         }
     }
-    
+
     //Setter and getter methods
     //
     public void setBounty(int newBounty){

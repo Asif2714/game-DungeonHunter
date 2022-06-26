@@ -6,7 +6,7 @@ public class Enemy{
     private String name;
     private int damage;
     private boolean alive;
-    
+
     //Constructor
     //
     public Enemy(String name, int damage){
@@ -14,13 +14,13 @@ public class Enemy{
         this.damage = damage;
         this.alive = true;
     }
-    
+
     //Method to get description of the enemy
     //
     public String getDescription(){
         return "Name: "+getName() + ", Damage: "+getDamage();
     }
-    
+
     //Setter and getter methods
     //
     public String getName(){
